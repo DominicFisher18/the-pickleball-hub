@@ -1,0 +1,61 @@
+.quiz-section {
+    margin-top: 9rem;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-header p {
+    font-size: 2rem;
+    margin-left: 5rem;
+}
+
+.quiz-header button {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    margin-right: 5rem;
+}
+
+.quiz-header button:hover {
+    cursor: pointer;
+}
+
+.choices-div-styling {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.choices-div-styling h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.choices-div {
+    display: flex;flex-direction: column;
+}
+
+.btn-styling {
+    background-color: var(--green);
+    color: white;
+    padding: 2rem 5rem;
+    border-radius: 3rem;
+    margin: 0.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.play-again-btn {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    border-radius: 2rem;
+    background-color: var(--green);
+    color:white
+}
