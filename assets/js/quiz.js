@@ -22,16 +22,41 @@ const questions = [
         choices: ['Kitchen', 'Laundry Room', 'Garage', 'Backyard'],
         correct: 'Kitchen'
     },
-    // {
-    //     intro: 'How many points to win a pickleball game?',
-    //     choices: ['7', '21', '15', '11'],
-    //     correct: '11'
-    // },
-    // {
-    //     intro: 'How many points to win a pickleball game?',
-    //     choices: ['7', '21', '15', '11'],
-    //     correct: '11'
-    // },
+    {
+        intro: 'What is the length of the non-volley zone?',
+        choices: ['7 feet', '10 feet', '5 feet', '15 feet'],
+        correct: '7 feet'
+    },
+    {
+        intro: 'What is the ruling if a ball hits any outside line?',
+        choices: ['The ball is out', 'The ball is in', 'Replay the serve', 'The referee decides'],
+        correct: 'The ball is in'
+    },
+    {
+        intro: 'What is the ruling if a ball hits the kitchen line on a serve?',
+        choices: ['The ball is out', 'The ball is in', 'Replay the serve', 'The referee decides'],
+        correct: 'The ball is out'
+    },
+    {
+        intro: 'What is a penalty called in pickelball?',
+        choices: ['A fault', 'A penalty', 'A technical', 'An oopsie daisy'],
+        correct: 'A fault'
+    },
+    {
+        intro: 'What is the most common way to play pickleball?',
+        choices: ['Singles', 'Doubles', 'Triples', 'Quads'],
+        correct: 'Doubles'
+    },
+    {
+        intro: 'What motion must be made when serving the ball',
+        choices: ['Any motion is ok', 'A downwards motion', 'A sideways motion', 'An upward motion'],
+        correct: 'An upward motion'
+    },
+    {
+        intro: 'What is the ruling is a game is ties 10-10 in a game to 11?',
+        choices: ['First to 11', 'Win by 2', 'First to 15', 'Win by 3'],
+        correct: 'Win by 2'
+    },
 ]
 
 
