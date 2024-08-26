@@ -80,3 +80,7 @@ section {
     margin: 0.5rem;
     margin-bottom: 2rem;
 }
+
+.cart-section {
+    height: 100vh;
+}
