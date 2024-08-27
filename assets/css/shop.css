@@ -84,3 +84,86 @@ section {
 .cart-section {
     height: 100vh;
 }
+
+.cart-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    border: 0.3rem solid var(--green);
+    border-radius: 3rem;
+}
+
+.name-and-price {
+    display: flex;
+    margin-right: 2rem;
+}
+
+.cart-name {
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cart-price {
+    font-size: 3rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.delete-button {
+    padding: 1rem 3rem;
+    background: linear-gradient(35deg, var(--green), black);
+    border-radius: 3rem;
+    color: white;
+}
+
+.delete-and-quantity {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cart-input {
+    height: 3rem;
+    width: 4rem;
+    border-radius: 5px;
+    border: 1px solid var(--green);
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+/* .cart-div {
+    border: 0.3rem solid var(--green);
+    border-radius: 3rem;
+} */
+
+.cart-total-cost {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.total-cost-header {
+    font-size: 3rem;
+    margin-right: 2rem;
+}
+
+.checkout-btn {
+    margin-left: 2rem;
+    padding: 2rem 4rem;
+    background-color: black;
+    color: white;
+    border-radius: 3rem;
+}
+
+.checkout-btn:hover {
+    background-color: var(--green);
+    cursor: pointer;
+}
