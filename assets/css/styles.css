@@ -133,6 +133,7 @@ a {
 
 .assessment-div {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     margin-top: 3rem;
@@ -147,6 +148,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .assessment-left h2,
@@ -381,4 +383,73 @@ a {
 .contact .box-container .box-right button:hover {
     background-color: var(--orange);
     color: black;
+}
+
+@media (max-width: 1500px) {
+    .shop {
+        height: 30vh;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    html {
+        font-size: 60%;
+    }
+
+    .middle-header {
+        font-size: 2.5rem;
+    }
+
+    .left-header a,
+    .right-header a {
+        font-size: 2rem;
+    }
+
+    .header-div {
+        height: 6vh;
+    }
+
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .a-quiz {
+        display: none;
+    }
+    .a-contact {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 45%;
+    }
+
+    .left-header,
+    .right-header {
+        display: none;
+    }
+
+    .assessment-left,
+    .assessment-right {
+        height: 65rem;
+    }
+}
+
+@media (max-width: 390px) {
+
+}
+
+@media (max-width: 350px) {
+
+    html {
+        font-size: 40%;
+    }
 }
