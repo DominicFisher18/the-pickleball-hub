@@ -81,9 +81,7 @@ section {
     margin-bottom: 2rem;
 }
 
-.cart-section {
-    height: 100vh;
-}
+
 
 .cart-row {
     display: flex;
@@ -148,6 +146,7 @@ section {
     justify-content: space-around;
     align-items: center;
     margin-top: 3rem;
+    margin-bottom: 15rem;
 }
 
 .total-cost-header {

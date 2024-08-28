@@ -8,10 +8,14 @@ function addToCartButtonClick(event) {
     let button = event.target
     let firstDiv = button.parentElement.parentElement
     let secondDiv = button.parentElement
-    // console.log(itemDiv.firstElementChild)
+    // let thirdDiv = button.parentElement.parentElement.parentElement.firstElementChild
+    // console.log(thirdDiv)
+    
     let itemName = firstDiv.firstElementChild.innerHTML
     let itemPrice = secondDiv.firstElementChild.innerHTML
-    console.log('hello')
+    // let productImage = thirdDiv.firstElementChild
+    // console.log(productImage.src)
+    
     addToCart(itemName, itemPrice)
     updateCost()
 }
@@ -71,5 +75,13 @@ function updateCost() {
     }
     
     costElement.innerHTML = 'Total cost: $ ' + totalCost
+}
+
+document.querySelector('.checkout-btn').addEventListener('click', clearCart)
+
+function clearCart() {
+    let cartDiv = document.querySelector('.js-cart-div')
+    cartDiv.innerHTML = ''
+    alert('Your purchase has been completed. Thank you!')
 }
 
