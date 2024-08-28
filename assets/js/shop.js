@@ -11,7 +11,7 @@ function addToCartButtonClick(event) {
     // console.log(itemDiv.firstElementChild)
     let itemName = firstDiv.firstElementChild.innerHTML
     let itemPrice = secondDiv.firstElementChild.innerHTML
-    console.log(itemName, itemPrice)
+    console.log('hello')
     addToCart(itemName, itemPrice)
     updateCost()
 }
@@ -36,7 +36,7 @@ function addToCart(itemName, itemPrice) {
     cartRow.innerHTML = cartRowInfo
     cartDiv.append(cartRow)
     cartRow.querySelector('.delete-button').addEventListener('click', removeFromCart)
-    cartRow.querySelector('.cart-input').addEventListener('change', updateCost)
+    cartRow.querySelector('.cart-input').addEventListener('change', checkIfPositive)
 }
 
 function removeFromCart(event) {
@@ -46,30 +46,30 @@ function removeFromCart(event) {
     updateCost()
 }
 
+function checkIfPositive(event) {
+    if (event.target.value <= 0) {
+        event.preventDefault()
+        event.target.value = 1
+    }
+
+    updateCost()
+}
+
 function updateCost() {
     let totalCost = 0
     let costElement = document.querySelector('.total-cost-header')
     let cartDiv = document.querySelector('.js-cart-div')
-    let cartRows = cartDiv.querySelector('.cart-row')
+    let cartRows = cartDiv.querySelectorAll('.cart-row')
 
-    let itemPrice = cartRows.querySelector('.js-cart-price').innerHTML
-    let cost = parseFloat(itemPrice.replace('$', ''))
-    let itemQuantity = cartRows.querySelector('.js-cart-input').value
-    
-    totalCost += cost * itemQuantity
-    // console.log(totalCost)
-
-
-    // for (let i = 0; i < cartRows.length; i++) {
-    //     let cartRow = cartRows[i]
-    //     let itemPrice = cartRow.querySelector('.js-cart-price').innerHTML
-    //     let itemQuantity = cartRow.querySelector('.js-cart-input')
-    //     let quantity = itemQuantity.value
-    //     let cost = parseFloat(itemPrice.replace('$', ''))
-    //     totalCost = totalCost + (cost * quantity)
-    // }
+    for (let i = 0; i < cartRows.length; i++) {
+        let cartRow = cartRows[i]
+        let itemPrice = cartRow.querySelector('.js-cart-price').innerHTML
+        let quantity = cartRow.querySelector('.js-cart-input').value
+        // let quantity = itemQuantity.value
+        let cost = parseFloat(itemPrice.replace('$', ''))
+        totalCost = totalCost + (cost * quantity)
+    }
     
     costElement.innerHTML = 'Total cost: $ ' + totalCost
-    console.log(totalCost)
 }
 
