@@ -1,20 +1,18 @@
 let cartBtn = document.querySelectorAll('.add-to-cart')
+let cartHeader = document.querySelector('.cart-div-header')
+let costElement = document.querySelector('.total-cost-header')
 
 cartBtn.forEach((button) => {
     button.addEventListener('click', addToCartButtonClick)
 })
 
 function addToCartButtonClick(event) {
+    cartHeader.innerHTML = ''
     let button = event.target
     let firstDiv = button.parentElement.parentElement
     let secondDiv = button.parentElement
-    // let thirdDiv = button.parentElement.parentElement.parentElement.firstElementChild
-    // console.log(thirdDiv)
-    
     let itemName = firstDiv.firstElementChild.innerHTML
     let itemPrice = secondDiv.firstElementChild.innerHTML
-    // let productImage = thirdDiv.firstElementChild
-    // console.log(productImage.src)
     
     addToCart(itemName, itemPrice)
     updateCost()
@@ -61,7 +59,6 @@ function checkIfPositive(event) {
 
 function updateCost() {
     let totalCost = 0
-    let costElement = document.querySelector('.total-cost-header')
     let cartDiv = document.querySelector('.js-cart-div')
     let cartRows = cartDiv.querySelectorAll('.cart-row')
 
@@ -81,6 +78,8 @@ document.querySelector('.checkout-btn').addEventListener('click', clearCart)
 
 function clearCart() {
     let cartDiv = document.querySelector('.js-cart-div')
+    totalCost = 0
+    costElement.innerHTML = 'Total cost: $ ' + totalCost
     cartDiv.innerHTML = ''
     alert('Your purchase has been completed. Thank you!')
 }

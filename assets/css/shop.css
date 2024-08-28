@@ -166,3 +166,8 @@ section {
     background-color: var(--green);
     cursor: pointer;
 }
+
+.cart-div {
+    font-size: 3rem;
+    text-align: center;
+}
