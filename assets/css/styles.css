@@ -86,7 +86,7 @@ a {
 
 .home {
     height: 80vh;
-    background: url('/assets/images/pickleball1.png') no-repeat;
+    background: url('../images/pickleball1.png') no-repeat;
     background-size: cover;
     background-position: center;
     background-position: fixed;
